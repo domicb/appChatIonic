@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      !Introduce tu nombre y comienza a chatear!
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--<ion-spinner [hidden]="isLoad"></ion-spinner>-->
+  <h1>Form</h1>
+  <form [formGroup]="form">
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Username</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <div text-center>
+    <button ion-button 
+    (click)="formSubmit()" 
+    [disabled]="!isValid"
+  > Empezar</button>
+  </div>
+</form>

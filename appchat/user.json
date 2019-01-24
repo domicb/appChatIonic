@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "nombre defecto",
+      "content": "contenido defecto"
+    },
+    {
+      "name": "mi Fruta",
+      "content": "nuevo mensaje lalla",
+      "id": 2
+    },
+    {
+      "name": "domcib",
+      "content": "mi mensaje a la derecha",
+      "id": 3
+    },
+    {
+      "content": "ensaje directo",
+      "id": 4
+    }
+  ]
+}

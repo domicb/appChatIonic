@@ -1,0 +1,39 @@
+<!--
+  Generated template for the ChatViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sala de chat</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="form">
+    <ion-item *ngFor="let item of messages">
+        <div *ngIf="me" text-end >{{item.content}}</div>
+        <br>
+        <div *ngIf="!me">{{ item.content }}</div>
+    </ion-item>
+    
+    <div text-right>
+      <ion-item>
+          <ion-input 
+            type="text" 
+            formControlName="content"
+          > 
+        </ion-input>
+      </ion-item>     
+
+      <button ion-button 	
+        (click)="formSubmit()" 
+        [disabled]="!isValid"
+      ></button>
+    </div>
+    </form>
+</ion-content>
